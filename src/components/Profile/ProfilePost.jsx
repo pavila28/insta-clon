@@ -122,14 +122,14 @@ const ProfilePost = ({post}) => {
                 <Divider my={4} bg={'gray.500'}/>
 
                 <VStack w='full' alignItems={'start'} maxH={'350px'} overflow={'auto'}>
-                  <Comment createdAt='1d ago' username='patoneitor' profilePic='/profilepic.png' text={'Dummy images from unsplash'}/>
-
-                  <Comment createdAt='12h ago' username='abrahmov' profilePic='https://bit.ly/dan-abramov' text={'Nice pic'}/>
+                  {post.comments.map(comment => (
+                    <Comment key={comment.id} comment={comment}/>
+                  ))}
                 </VStack>
 
                 <Divider my={4} bg={'gray.8000'}/>
 
-                <PostFooter isProfilePage={true}/>
+                <PostFooter isProfilePage={true} post={post}/>
               </Flex>
             </Flex>
 
