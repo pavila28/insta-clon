@@ -16,7 +16,7 @@ const Comment = ({ comment }) => {
 
         <Flex direction={'column'}>
             <Flex gap={2} alignItems={'center'}>
-                <Link>
+                <Link to={`/${userProfile.username}`}>
                     <Text fontWeight={'bold'} fontSize={12}>
                         {userProfile.username}
                     </Text>
