@@ -18,5 +18,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-// 1:40:02
